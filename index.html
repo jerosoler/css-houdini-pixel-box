@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Box - Css Houdini - Jero Soler</title>
     <meta description="CSS Houdini - Pixel Box - Jero Soler">
+    
 </head>
 <body> 
     <a href="https://github.com/jerosoler/css-houdini-pixel-box" class="github-corner" target="_blank">
@@ -22,7 +23,14 @@
     
     <div class="box">
         <h3>Info</h3>
-        laslaslasdasd ssadas dasldsadlasdas
+        <div>
+            <p>Create a pixel boxes with border radius and shadows</p>
+            <p>Pixel box is css houdini <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Houdini">read more</a></p>
+            <p>View repo on <a target="_blank" href="https://github.com/jerosoler/css-houdini-pixel-box">github</a></p>
+            <p>Inspired in <a target="_blank" href="https://nostalgic-css.github.io/NES.css/">NES.CSS Framework.</a></p>
+            <br>    
+            <p><a target="_blank" href="https://github.com/jerosoler/css-houdini-pixel-box">View install instructions</a></p>
+        </div>
 
     </div>
     
@@ -127,7 +135,7 @@
 
     </div>
     <div class="footer">
-        <h3>Developed by Jero Soler</h3>
+        <h3>Developed by <a href="https://github.com/jerosoler">Jero Soler</a></h3>
     </div>
     <style>
         *, *::before, *::after {
@@ -146,16 +154,24 @@
             font-size: 16px;
             font-family: "PS2P";
         }
+        .header h1,.header h3 {
+            text-align: center;
+        }
+        .footer h3 {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .footer h3 a {
+            color: white;
+        }
+
         body {
            padding: 0px;
-           
-            width: 100vw;
-            margin: 0px;
-            font-family: "PS2P",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-            
-            
-            color: black;
-            overflow-x: hidden;
+           margin: 0px;
+           font-family: "PS2P",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif; 
+           color: black;
+           overflow-x: hidden;
         }
         .container {
          padding-top: 30px;    
@@ -181,22 +197,38 @@
         }
         .github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
         
+        @media only screen and (max-width: 600px) {
+            body .container {
+                padding: 0px 10px;
+            }
+
+            .footer {
+                padding: 10px;
+            }
+
+            .github-corner {
+                display: none;
+            }
+        }
+
     </style>
 
     <style>
 
         .box {
             position: relative;
+            display: flex;
+            justify-content: space-between;
             padding: 30px;
             min-height: 70px;
             margin-top:50px;
             margin-bottom:50px;
             background-image: paint(pixelbox);
-            --pixelbox-border: 10px;
-            --pixelbox-border-radius: 1;
+            --pixelbox-border: 4px;
+            --pixelbox-border-radius: 1px;
             --pixelbox-border-color: #000000;
             --pixelbox-background-color: #ffffff;
-            --pixelbox-background-shadow-border: 10px;
+            --pixelbox-background-shadow-border: 8px;
             --pixelbox-background-shadow-color: #adafbc;
             --pixelbox-background-shadow-position: bottom-right; 
             transition: --pixelbox-background-shadow-border 0.5s; 
@@ -204,7 +236,7 @@
         }
 
         .box:hover {
-            --pixelbox-background-shadow-border: 20px;
+            --pixelbox-background-shadow-border: 16px;
         }
 
         .box:nth-child(3) {
@@ -223,7 +255,7 @@
         .box h3 {
             text-align: center;
             position:absolute; 
-            top: -20px;
+            top: -24px;
             left: 50px;
             padding: 0px 15px;
             background-color: white;
@@ -317,10 +349,12 @@
             min-height: 70px;
             text-align: center;
             line-height: 70px;
+            --pixelbox-background-shadow-border: 0px;
         }
 
         .boxr.onep {
             --pixelbox-border-radius: 1px;
+            --pixelbox-background-shadow-border: 0px;
         }
         .boxr.twop {
             --pixelbox-border-radius: 2px;
@@ -330,6 +364,7 @@
         }
         .boxr.shadow {
             --pixelbox-background-shadow-border: 5px;
+            --pixelbox-background-shadow-color: #adafbc;
         }
 
         .boxr.shadow:hover {
@@ -425,7 +460,7 @@
             --pixelbox-border-color: #2eff05;
             --pixelbox-background-color: #1700e9;
             --pixelbox-background-shadow-border: 0px;
-            --pixelbox-background-shadow-color: #a30655;
+            --pixelbox-background-shadow-color: #030957;
             --pixelbox-background-shadow-position: top-right; 
             
         }
@@ -453,14 +488,6 @@
         }
 
         @media only screen and (max-width: 600px) {
-            body .container {
-                padding: 0px 10px;
-            }
-
-            .footer {
-                padding: 10px;
-            }
-
             .box {
                 display: flex;
                 flex-direction: column;
@@ -478,8 +505,10 @@
 
     </style>
 
+<script src="https://unpkg.com/css-paint-polyfill"></script>
 <script>
     if ('paintWorklet' in CSS && 'registerProperty' in CSS && 'CSSUnitValue' in window) {
+        
        CSS.registerProperty({
             name: '--pixelbox-border',
             syntax: '<length>',
@@ -529,13 +558,12 @@
             inherits: false
         });
         */
-        
-        CSS.paintWorklet.addModule('pixelbox.js');
-        
     } else {
         console.log("Not Supported");
-        alert("Not Supported");
-    }
+    } 
+    CSS.paintWorklet.addModule('pixelbox.js');
   </script>
+  
+
 </body>
 </html>

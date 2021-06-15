@@ -1,0 +1,30 @@
+{
+    "name": "css-houdini-pixel-box",
+    "version": "0.0.1",
+    "description": "CSS Houdini PixelBox",
+    "main": "pixelbox.js",
+    "directories": {
+      "doc": "docs"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jerosoler/css-houdini-pixel-box.git"
+    },
+    "keywords": [
+      "CSS",
+      "Houdini",
+      "pixelbox",
+      "8bit",
+      "retro",
+      "paintworklet"
+    ],
+    "author": "Jero Soler",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/jerosoler/css-houdini-pixel-box/issues"
+    },
+    "homepage": "https://jerosoler.github.io/css-houdini-pixel-box/"
+  }
