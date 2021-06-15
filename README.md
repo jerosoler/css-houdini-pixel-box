@@ -1,4 +1,4 @@
-[![GitHub license](https://img.shields.io/github/license/jerosoler/css-houdini-pixel-box)](https://github.com/jerosoler/css-houdini-pixel-box/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/jerosoler/css-houdini-pixel-box)](https://github.com/jerosoler/css-houdini-pixel-box/blob/master/LICENSE)
 
 # PixelBox
 
@@ -6,9 +6,9 @@ CSS Houdini library.
 
 [PLAY DEMO](https://jerosoler.github.io/css-houdini-pixel-box/)
 
-![Demo buttons](https://github.com/jerosoler/css-houdini-pixel-box/raw/main/docs/buttons.png)
+![Demo buttons](https://github.com/jerosoler/css-houdini-pixel-box/raw/master/docs/buttons.png)
 
-![Demo combine](https://github.com/jerosoler/css-houdini-pixel-box/raw/main/docs/combine.png)
+![Demo combine](https://github.com/jerosoler/css-houdini-pixel-box/raw/master/docs/combine.png)
 
 ## CDN
 
