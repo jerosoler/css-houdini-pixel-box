@@ -13,44 +13,117 @@
         </svg>
     </a>
     <div class="header">
-        <h1>Pixel Box</h1>
-        <h3>CSS Houdini</h3>
+        <div>
+            <h1>Pixel Box</h1>
+            <h3>CSS Houdini</h3>
+        </div>
     </div>
     <div class="container">
+    
+    <div class="box">
+        <h3>Info</h3>
+        laslaslasdasd ssadas dasldsadlasdas
 
-    <div class="examples">
-        <div class="example1">
-            Text
-        </div>
-        <div class="example2">
-            Text
-        </div>
-        <div class="example3">
-            Text
-        </div>
-        <div class="example4">
-            Text
-        </div>
-
-        <br>
-        <div class="example5">
-            Text
-        </div>
-
-        <div class="example6">
-            Text
-        </div>
-        <div class="example7">
-            Text
-        </div>
-        <div class="example8">
-            Text
-        </div>
-        <br>
-        <div class="example9">
-            Text
-        </div>
     </div>
+    
+    <div class="box">
+        <h3>Buttons</h3>
+        <button type="button" class="">Normal</button>
+        <button type="button" class="primary">Primary</button>
+        <button type="button" class="success">Success</button>
+        <button type="button" class="warning">Warning</button>
+        <button type="button" class="danger">Danger</button>
+    </div>
+
+    <div class="box">
+        <h3>Boxes Radius</h3>
+
+        <div class="boxr ">
+            0 Radius    
+        </div>
+
+        <div class="boxr onep">
+            1 Radius    
+        </div>
+
+        <div class="boxr twop">
+            2 Radius    
+        </div>
+
+        <div class="boxr fourp">
+            4 Radius    
+        </div>
+
+    </div>
+
+    <div class="box">
+        <h3>Shadows</h3>
+
+        <div class="boxr shadow topleft">
+            top-left    
+        </div>
+
+        <div class="boxr onep shadow topright">
+            top-right
+        </div>
+
+        <div class="boxr twop shadow bottomleft">
+            bottom-left   
+        </div>
+
+        <div class="boxr fourp  shadow bottomright">
+            bottom-right    
+        </div>
+
+    </div>
+
+    <div class="box">
+        <h3>Border Color</h3>
+
+        <div class="boxr shadow topleft green">
+            Green    
+        </div>
+
+        <div class="boxr onep shadow topright blue">
+            Blue
+        </div>
+
+        <div class="boxr twop shadow bottomleft yellow">
+            Yellow    
+        </div>
+
+        <div class="boxr fourp  shadow bottomright red">
+            Red
+        </div>
+
+    </div>
+
+    <div class="box examples">
+        <h3>Combine</h3>
+
+        <div class="example1">
+            Example 1    
+        </div>
+
+        <div class="example2">
+            Example 2
+        </div>
+
+        <div class="example3">
+            Example 3 
+        </div>
+
+        <div class="example4">
+            Example 4
+        </div>
+
+        <div class="example5">
+            Example 5
+        </div>
+
+    </div>
+
+    
 
     </div>
     <div class="footer">
@@ -60,24 +133,45 @@
         *, *::before, *::after {
          box-sizing: border-box;
         }
+        @font-face {
+            font-family: "PS2P";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+        }
+        html {
+            padding: 0px;
+            margin: 0px;
+            font-size: 16px;
+            font-family: "PS2P";
+        }
         body {
-            height: 100vh;
+           padding: 0px;
+           
             width: 100vw;
             margin: 0px;
-            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-            flex-direction: column;
-            background-color: red;
-            color: black;
-        }
-        body, .container {
+            font-family: "PS2P",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
             
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            align-content: center;
+            
+            color: black;
+            overflow-x: hidden;
+        }
+        .container {
+         padding-top: 30px;    
+         padding-bottom: 30px;    
+         max-width: 1140px;
+         margin: auto;
+           
         }
         .header, .footer {
-            height: 10vh;
+            min-height: 60px;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
         }
       
        
@@ -91,141 +185,302 @@
 
     <style>
 
-        .examples > div {
-            display: inline-block;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 200px;
+        .box {
+            position: relative;
+            padding: 30px;
+            min-height: 70px;
+            margin-top:50px;
+            margin-bottom:50px;
             background-image: paint(pixelbox);
-            margin-left: 10px;
-            margin-bottom: 10px;
-            text-align: center;
-            line-height: 150px;
-
-
-
-        }
-
-        .example1  {
-            --pixelbox-border: 10px;
-            --pixelbox-border-radius: 0;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
-            --pixelbox-background-shadow-border: 10px;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-right; 
-        }
-        .example2  {
             --pixelbox-border: 10px;
             --pixelbox-border-radius: 1;
             --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
-            --pixelbox-background-shadow-border: 20px;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-right; 
-        }
-
-        .example3  {
-            --pixelbox-border: 20px;
-            --pixelbox-border-radius: 2;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
-            --pixelbox-background-shadow-border: 40px;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-right; 
-        }
-        .example4  {
-            --pixelbox-border: 20px;
-            --pixelbox-border-radius: 3;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
-            --pixelbox-background-shadow-border: 300px;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-right; 
-        }
-
-        .example5  {
-            --pixelbox-border: 10px;
-            --pixelbox-border-radius: 0;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
+            --pixelbox-background-color: #ffffff;
             --pixelbox-background-shadow-border: 10px;
             --pixelbox-background-shadow-color: #adafbc;
             --pixelbox-background-shadow-position: bottom-right; 
+            transition: --pixelbox-background-shadow-border 0.5s; 
+
         }
-        .example6  {
+
+        .box:hover {
+            --pixelbox-background-shadow-border: 20px;
+        }
+
+        .box:nth-child(3) {
+            --pixelbox-background-shadow-color: #ff9900;
+        }
+
+        .box:nth-child(4) {
+            --pixelbox-background-shadow-color: #b400eb;
+        }
+
+        .box:nth-child(5) {
+            --pixelbox-background-shadow-color: #cafd3d;
+        }
+
+
+        .box h3 {
+            text-align: center;
+            position:absolute; 
+            top: -20px;
+            left: 50px;
+            padding: 0px 15px;
+            background-color: white;
+
+        }
+        
+
+        button {
+            font-family: "PS2P";
+            background-color: transparent;
+            cursor: pointer;
+            border: 0px;
+            font-size: 18px;
+            padding: 15px 15px;
+            margin: 0px 3px;
+            background-image: paint(pixelbox);
+            --pixelbox-border: 3px;
+            --pixelbox-border-radius: 0;
+            --pixelbox-border-color: #000000;
+            --pixelbox-background-color: #ffffff;
+            --pixelbox-background-shadow-border: 3px;
+            --pixelbox-background-shadow-color: #adafbc;
+            --pixelbox-background-shadow-position: bottom-right; 
+        }
+        button:active {
+            --pixelbox-background-shadow-position: top-left; 
+        }
+
+        button:hover {
+            color: black;
+            --pixelbox-background-color: #e7e7e7;
+            --pixelbox-background-shadow-border: 4px;
+        }
+
+        button.primary {
+            color: white;
+            --pixelbox-background-color: #209cee;
+            --pixelbox-background-shadow-color: #006bb3;
+        }
+
+        button.primary:hover {
+            color: white;
+            --pixelbox-background-color: #108de0;
+            --pixelbox-background-shadow-border: 4px;
+        }
+
+        button.success {
+            color: white;
+            --pixelbox-background-color: #92cc41;
+            --pixelbox-background-shadow-color: #4aa52e;
+        }
+
+        button.success:hover {
+            color: white;
+            --pixelbox-background-color: #76c442;
+            --pixelbox-background-shadow-border: 4px;
+        }
+
+        button.warning {
+            color: white;
+            --pixelbox-background-color: #f7d51d;
+            --pixelbox-background-shadow-color: #e59400;
+        }
+
+        button.warning:hover {
+            color: white;
+            --pixelbox-background-color:#f2c409;
+            --pixelbox-background-shadow-border: 4px;
+        }
+
+        button.danger {
+            color: white;
+            --pixelbox-background-color: #e76e55;
+            --pixelbox-background-shadow-color: #8c2022;
+        }
+
+        button.danger:hover {
+            color: white;
+            --pixelbox-background-color: #ce372b;
+            --pixelbox-background-shadow-border: 4px;
+        }
+
+       
+        .boxr {
+            background-image: paint(pixelbox);
+            --pixelbox-border: 5px;
+            --pixelbox-border-radius: 0;
+            --pixelbox-border-color: #000000;
+            display: inline-block;
+            width: 22%;
+            min-height: 70px;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .boxr.onep {
+            --pixelbox-border-radius: 1px;
+        }
+        .boxr.twop {
+            --pixelbox-border-radius: 2px;
+        }
+        .boxr.fourp {
+            --pixelbox-border-radius: 4px;
+        }
+        .boxr.shadow {
+            --pixelbox-background-shadow-border: 5px;
+        }
+
+        .boxr.shadow:hover {
+            --pixelbox-background-shadow-border: 10px;
+        }
+
+        .boxr.topleft {
+            --pixelbox-background-shadow-position: top-left; 
+        }
+        .boxr.topright {
+            --pixelbox-background-shadow-position: top-right; 
+        }
+        .boxr.bottomleft {
+            --pixelbox-background-shadow-position: bottom-left; 
+        }
+        .boxr.bottomright {
+            --pixelbox-background-shadow-position: bottom-right; 
+        }
+
+        .boxr.red {
+            --pixelbox-border-color: red;
+        }
+        .boxr.green {
+            --pixelbox-border-color: green;
+        }
+        .boxr.blue {
+            --pixelbox-border-color: blue;
+        }
+        .boxr.yellow {
+            --pixelbox-border-color: yellow;
+        }
+
+        .example1 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            background-image: paint(pixelbox);
             --pixelbox-border: 10px;
-            --pixelbox-border-radius: 0;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
+            --pixelbox-border-radius: 5px;
+            --pixelbox-border-color: #a0a0a0;
+            --pixelbox-background-color: #000000;
             --pixelbox-background-shadow-border: 20px;
-            --pixelbox-background-shadow-color: #adafbc;
+            --pixelbox-background-shadow-color: #494949;
             --pixelbox-background-shadow-position: bottom-right; 
         }
-
-        .example7  {
-            --pixelbox-border: 20px;
-            --pixelbox-border-radius: 0;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
+        .example2 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            background-image: paint(pixelbox);
+            --pixelbox-border: 10px;
+            --pixelbox-border-radius: 7px;
+            --pixelbox-border-color: #100241;
+            --pixelbox-background-color: #00ffff;
             --pixelbox-background-shadow-border: 20px;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-right; 
+            --pixelbox-background-shadow-color: #0d21d8;
+            --pixelbox-background-shadow-position: top-right; 
         }
-        .example8  {
+
+        .example3 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            background-image: paint(pixelbox);
+            --pixelbox-border: 10px;
+            --pixelbox-border-radius: 1px;
+            --pixelbox-border-color: #410202;
+            --pixelbox-background-color: #be04b5;
+            --pixelbox-background-shadow-border: 20px;
+            --pixelbox-background-shadow-color: #a30655;
+            --pixelbox-background-shadow-position: top-right; 
+            filter: drop-shadow(0 12px 24px rgba(255,0,0,.8));
+        }
+        .example4 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            background-image: paint(pixelbox);
             --pixelbox-border: 20px;
-            --pixelbox-border-radius: 0;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
-            --pixelbox-background-shadow-border: 30px;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-right; 
+            --pixelbox-border-radius: 1px;
+            --pixelbox-border-color: #2eff05;
+            --pixelbox-background-color: #1700e9;
+            --pixelbox-background-shadow-border: 0px;
+            --pixelbox-background-shadow-color: #a30655;
+            --pixelbox-background-shadow-position: top-right; 
+            
         }
 
-        .example9  {
-            width: 500px !important;
-            height: 300px !important;
-            --pixelbox-border: 7px;
-            --pixelbox-border-radius: 10;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
-            --pixelbox-background-shadow-border: 30px;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-right; 
-        }
-
-        .test {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 150px;
-
+        .example5 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            background-image: paint(pixelbox);
             --pixelbox-border: 10px;
             --pixelbox-border-radius: 0px;
-            --pixelbox-border-color: #000000;
-            --pixelbox-background-color: #ff9900;
-            --pixelbox-background-shadow-border: true;
-            --pixelbox-background-shadow-color: #adafbc;
-            --pixelbox-background-shadow-position: bottom-left; 
-            background-image: paint(pixelbox);
+            --pixelbox-border-color: #ff0000;
+            --pixelbox-background-color: #961b1b;
+            --pixelbox-background-shadow-border: 20px;
+            --pixelbox-background-shadow-color: #a30655;
+            --pixelbox-background-shadow-position: top-left; 
+            
         }
-        .test2 {
-            margin-left: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 150px;
-            border: 10px solid black;
+
+        .box.examples div:hover {
+            --pixelbox-background-shadow-border: 30px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body .container {
+                padding: 0px 10px;
+            }
+
+            .footer {
+                padding: 10px;
+            }
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .box button,
+            .box .boxr {
+                width: 90%;
+                margin-bottom: 15px;
+            }
+            .box.examples div {
+                margin-bottom: 15px;
+            }
         }
 
     </style>
 
 <script>
     if ('paintWorklet' in CSS && 'registerProperty' in CSS && 'CSSUnitValue' in window) {
-       /*CSS.registerProperty({
+       CSS.registerProperty({
             name: '--pixelbox-border',
             syntax: '<length>',
             initialValue: '2px',
